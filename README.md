@@ -39,4 +39,3 @@ This site showcases services, a visual gallery, company information, and easy co
 
 ---
 
-## 📂 Project Structure (example)
