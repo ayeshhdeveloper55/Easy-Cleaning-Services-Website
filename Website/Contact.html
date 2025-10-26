@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Easy Cleaning Services</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easy Cleaning Services - Professional cleaning services for residential, commercial, and industrial spaces" name="description">
+    <meta content="cleaning services, residential cleaning, commercial cleaning, office cleaning, hospital cleaning" name="keywords">
+
+    <!-- Favicon -->
+    <link href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iI0ZGMDAwRiIvPgo8cGF0aCBkPSJNMzIgMTZDMjUuMzcyNiAxNiAyMCAyMS4zNzI2IDIwIDI4QzIwIDM0LjYyNzQgMjUuMzcyNiA0MCAzMiA0MEMzOC42Mjc0IDQwIDQ0IDM0LjYyNzQgNDQgMjhDNDQgMjEuMzcyNiAzOC42Mjc0IDE2IDMyIDE2Wk0zMiAzNkMyNy41ODIyIDM2IDI0IDMyLjQxNzggMjQgMjhDMjQgMjMuNTgyMiAyNy41ODIyIDIwIDMyIDIwQzM2LjQxNzggMjAgNDAgMjMuNTgyMiA0MCAyOEM0MCAzMi40MTc4IDM2LjQxNzggMzYgMzIgMzZaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDggMTZINDhDNDcuNDQ3NyAxNiA0NyAxNi40NDc3IDQ3IDE3VjM5QzQ3IDM5LjU1MjMgNDcuNDQ3NyA0MCA0OCA0MEg0OEM0OC41NTIzIDQwIDQ5IDM5LjU1MjMgNDkgMzlWMTdDNDkgMTYuNDQ3NyA0OC41NTIzIDE2IDQ4IDE2WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE2IDE2SDE2QzE1LjQ0NzcgMTYgMTUgMTYuNDQ3NyAxNSAxN1YzOUMxNSAzOS41NTIzIDE1LjQ0NzcgNDAgMTYgNDBIMTZDMTYuNTUyMyA0MCAxNyAzOS41NTIzIDE3IDM5VjE3QzE3IDE2LjQ0NzcgMTYuNTUyMyAxNiAxNiAxNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik01MiA0OEgxMkMxMS40NDc3IDQ4IDExIDQ4LjQ0NzcgMTEgNDlWNTVDMTEgNTUuNTUyMyAxMS40NDc3IDU2IDEyIDU2SDUyQzUyLjU1MjMgNTYgNTMgNTUuNTUyMyA1MyA1NVY0OUM1MyA0OC40NDc3IDUyLjU1MjMgNDggNTIgNDhaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF800F;
+            --secondary: #001064;
+            --light: #F6F7F8;
+            --dark: #010A35;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+
+        /* Header & Top Bar */
+        .bg-dark {
+            background-color: var(--dark) !important;
+        }
+
+        .text-white-50 {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand h3 {
+            color: var(--dark);
+        }
+
+        .nav-item .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item .nav-link:hover,
+        .nav-item .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            padding: 10px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6730d;
+            border-color: #e6730d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 128, 15, 0.3);
+        }
+
+        /* Carousel */
+        .carousel-item {
+            height: 80vh;
+            min-height: 500px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            filter: brightness(0.7);
+        }
+
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(rgba(1, 10, 53, 0.9), rgba(1, 10, 53, 0.9)), 
+                        url('https://images.unsplash.com/photo-1576671414121-aa0f8f8b7e96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            border-radius: 10px;
+        }
+
+        .quote-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control, .form-select {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(255, 128, 15, 0.25);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark) !important;
+        }
+
+        footer h1, footer h5 {
+            color: white;
+        }
+
+        footer p, footer a {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            z-index: 99;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #e6730d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 99;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25D366;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animations */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animated.slideInDown {
+            animation: slideInDown 1s ease-out;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .carousel-item {
+                height: 60vh;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+            
+            .quote-section {
+                padding: 50px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 50vh;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+            
+            .back-to-top, .whatsapp-button {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+            
+            .quote-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     <div class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-phone-alt me-2"></i>
+                    <small>+923004550539</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open me-2"></i>
+                    <small>easycleaning1122@gmail.com</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    <small>+923004550539</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <ol class="breadcrumb justify-content-end mb-0">
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="Index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="#footer">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="#footer">Privacy</a></li>
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="#footer">Support</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="me-3" style="width: 50px; height: 50px; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-broom text-white"></i>
+                </div>
+                <h3 class="m-0 fw-bolder">Easy Cleaning Services</h3>
+            </a>
+     
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="Service.html" class="nav-item nav-link">Our Services</a>
+                    <a href="Contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/share/1Sm8iaW2SK/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://x.com/EasyS4092?t=7AoRpZ847w6d-RkHAswxOw&s=08"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.linkedin.com/in/easy-cleaning-services-88976138a/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://www.instagram.com/easycleaning1122/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- Carousel -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <!-- In first carousel item -->
+<img class="w-100" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Professional Cleaning">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-4 animated slideInDown">Contact Us</h1>
+                                    <p class="fs-5 text-light mb-4 pb-2 mx-sm-5 animated slideInDown">We provide top-quality residential, commercial, and industrial cleaning services with trained professionals and eco-friendly products.</p>
+                                    <a href="Service.html" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- In second carousel item -->
+<img class="w-100" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Complete Cleaning Solutions">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-4 animated slideInDown">Complete Cleaning Solutions for Every Space</h1>
+                                    <p class="fs-5 text-light mb-4 pb-2 mx-sm-5 animated slideInDown">From residential homes to commercial complexes and hospitals - we deliver exceptional cleaning services tailored to your needs.</p>
+                                    <a href="#contact" class="btn btn-primary py-3 px-5 animated slideInDown">Get Free Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    
+    <!-- Quote Section -->
+    <div class="container-fluid quote-section my-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h1 id="contact" class="text-white mb-4">Professional Cleaning Solutions for Homes and Businesses</h1>
+                    <p class="text-light mb-5">Whether you need regular maintenance cleaning or a one-time deep clean, our team of professionals is equipped to handle all your cleaning needs. We use eco-friendly products and advanced techniques to ensure your space is spotless and hygienic.</p>
+                    <a href="index.html" class="btn btn-primary py-3 px-5">More Details</a>
+                </div>
+                <div class="col-lg-6">
+                   <center><h1 class="text-white">Contact Us</h1></center> 
+                    <form id="contactForm" class="quote-form">
+                        <h3 class="mb-4 text-center">Get a Free Quote</h3>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gname" name="name" placeholder="Your Name" required>
+                                    <label for="gname">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="gmail" name="email" placeholder="Your Email" required>
+                                    <label for="gmail">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cname" name="mobile" placeholder="Your Mobile" required>
+                                    <label for="cname">Your Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <select class="form-control" id="cage" name="service" required>
+                                        <option value="">Select Service</option>
+                                        <option value="residential">Residential Cleaning</option>
+                                        <option value="commercial">Commercial Cleaning</option>
+                                        <option value="office">Office Cleaning</option>
+                                        <option value="floor">Floor Services</option>
+                                        <option value="hospital">Hospital Cleaning</option>
+                                        <option value="solar">Solar Panel Cleaning</option>
+                                        <option value="housekeeping">House Keeping</option>
+                                    </select>
+                                    <label for="cage"></label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Get A Free Quote</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h1 class="mb-4"><i class="fas fa-broom text-primary me-3"></i>Easy Cleaning Services</h1>
+                    <p>Professional cleaning services for residential, commercial, and industrial spaces. We use eco-friendly products and advanced cleaning techniques to ensure your space is spotless and hygienic. Trust us for all your cleaning needs.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for cleaning tips and special offers.</p>
+                    <form id="newsletterForm" class="newsletter-form d-flex">
+                        <input class="form-control me-2" type="email" name="email" placeholder="Your email" required>
+                        <button class="btn btn-primary">SignUp</button>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Karachi, Pakistan</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+923004550539</p>
+                    <p><i class="fab fa-whatsapp me-3"></i>+923004550539</p>
+                    <p><i class="fa fa-envelope me-3"></i>easycleaning1122@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Our Services</h5>
+                    <a class="btn btn-link" href="#service">Residential Cleaning</a>
+                    <a class="btn btn-link" href="#service">Commercial Cleaning</a>
+                    <a class="btn btn-link" href="#service">Office Cleaning</a>
+                    <a class="btn btn-link" href="#service">Hospital Cleaning</a>
+                    <a class="btn btn-link" href="#service">Floor Services</a>
+                    <a class="btn btn-link" href="#service">Solar Panel Cleaning</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <a class="btn btn-link" href="#service">Our Services</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Follow Us</h5>
+                    <div class="d-flex">
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/share/1Sm8iaW2SK/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://x.com/EasyS4092?t=7AoRpZ847w6d-RkHAswxOw&s=08"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.instagram.com/easycleaning1122/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/in/easy-cleaning-services-88976138a/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Easy Cleaning Services</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By Easy Cleaning Services Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923004550539" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Back to top button functionality
+        $(document).ready(function(){
+            // Show/hide back to top button
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').fadeIn('slow');
+                } else {
+                    $('.back-to-top').fadeOut('slow');
+                }
+                
+                // Navbar background change on scroll
+                if ($(window).scrollTop() > 50) {
+                    $('.navbar').addClass('navbar-scrolled');
+                } else {
+                    $('.navbar').removeClass('navbar-scrolled');
+                }
+            });
+            
+            // Smooth scroll to top
+            $('.back-to-top').click(function(e){
+                e.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // Contact form submission
+            $('#contactForm').submit(function(e){
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: $('#gname').val(),
+                    email: $('#gmail').val(),
+                    mobile: $('#cname').val(),
+                    service: $('#cage').val(),
+                    message: $('#message').val()
+                };
+                
+                // Simple validation
+                if (!formData.name || !formData.email || !formData.mobile || !formData.service) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // In a real implementation, you would send this data to a server
+                // For this example, we'll just show a success message
+                alert('Thank you for your inquiry! We will contact you soon at ' + formData.email + ' or ' + formData.mobile);
+                
+                // Reset form
+                $('#contactForm')[0].reset();
+            });
+            
+            // Newsletter form submission
+            $('#newsletterForm').submit(function(e){
+                e.preventDefault();
+                const email = $(this).find('input[name="email"]').val();
+                if(email) {
+                    alert('Thank you for subscribing to our newsletter with: ' + email);
+                    $(this).find('input[name="email"]').val('');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top - 70,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>

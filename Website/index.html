@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Easy Cleaning Services</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Easy Cleaning Services - Professional cleaning services for residential, commercial, and industrial spaces" name="description">
+    <meta content="cleaning services, residential cleaning, commercial cleaning, office cleaning, hospital cleaning" name="keywords">
+
+    <!-- Favicon -->
+    <link href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iI0ZGMDAwRiIvPgo8cGF0aCBkPSJNMzIgMTZDMjUuMzcyNiAxNiAyMCAyMS4zNzI2IDIwIDI4QzIwIDM0LjYyNzQgMjUuMzcyNiA0MCAzMiA0MEMzOC42Mjc0IDQwIDQ0IDM0LjYyNzQgNDQgMjhDNDQgMjEuMzcyNiAzOC42Mjc0IDE2IDMyIDE2Wk0zMiAzNkMyNy41ODIyIDM2IDI0IDMyLjQxNzggMjQgMjhDMjQgMjMuNTgyMiAyNy41ODIyIDIwIDMyIDIwQzM2LjQxNzggMjAgNDAgMjMuNTgyMiA0MCAyOEM0MCAzMi40MTc4IDM2LjQxNzggMzYgMzIgMzZaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDggMTZINDhDNDcuNDQ3NyAxNiA0NyAxNi40NDc3IDQ3IDE3VjM5QzQ3IDM5LjU1MjMgNDcuNDQ3NyA0MCA0OCA0MEg0OEM0OC41NTIzIDQwIDQ5IDM5LjU1MjMgNDkgMzlWMTdDNDkgMTYuNDQ3NyA0OC41NTIzIDE2IDQ4IDE2WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE2IDE2SDE2QzE1LjQ0NzcgMTYgMTUgMTYuNDQ3NyAxNSAxN1YzOUMxNSAzOS41NTIzIDE1LjQ0NzcgNDAgMTYgNDBIMTZDMTYuNTUyMyA0MCAxNyAzOS41NTIzIDE3IDM5VjE3QzE3IDE2LjQ0NzcgMTYuNTUyMyAxNiAxNiAxNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik01MiA0OEgxMkMxMS40NDc3IDQ4IDExIDQ4LjQ0NzcgMTEgNDlWNTVDMTEgNTUuNTUyMyAxMS40NDc3IDU2IDEyIDU2SDUyQzUyLjU1MjMgNTYgNTMgNTUuNTUyMyA1MyA1NVY0OUM1MyA0OC40NDc3IDUyLjU1MjMgNDggNTIgNDhaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+        :root {
+            --primary: #FF800F;
+            --secondary: #001064;
+            --light: #F6F7F8;
+            --dark: #010A35;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .back-to-top {
+            position: fixed;
+            display: none;
+            right: 30px;
+            bottom: 30px;
+            z-index: 99;
+        }
+
+        /* Spinner */
+        #spinner {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .5s ease-out, visibility 0s linear .5s;
+            z-index: 99999;
+        }
+
+        #spinner.show {
+            transition: opacity .5s ease-out, visibility 0s linear 0s;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .logos {
+            height: 50px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: var(--dark);
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary);
+        }
+
+        /* Header/Carousel */
+        .carousel-item {
+            height: 85vh;
+            min-height: 500px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .carousel-caption {
+            background: rgba(1, 10, 53, 0.8);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #f8f9fa !important; /* Changed to light color for better visibility */
+        }
+
+        /* About Section */
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Facts Section */
+        .facts {
+            background: linear-gradient(rgba(1, 10, 53, 0.9), rgba(1, 10, 53, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+        }
+
+        .facts h1 {
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        .facts span {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Features Section */
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        /* Services Section */
+        .service-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary);
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .service-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(rgba(1, 10, 53, 0.9), rgba(1, 10, 53, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center center no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+            color: white;
+        }
+
+        .quote-form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .quote-form .form-control {
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .why-choose-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .why-choose-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary);
+            margin: 0 auto 20px;
+        }
+
+        .why-choose-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        /* Testimonial Section */
+        .testimonial-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .testimonial-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #7F8499;
+            padding-top: 80px;
+        }
+
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        footer .btn-link {
+            color: #7F8499;
+            text-decoration: none;
+            padding: 5px 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        footer .btn-link:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        /* WhatsApp Floating Icon */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 90px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-float:active {
+            transform: scale(0.95);
+        }
+
+        /* Pulse animation for the icon */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-float.pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Optional tooltip */
+        .whatsapp-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 10px;
+            background-color: var(--dark);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        /* Form styling */
+        .quote-form .form-control,
+        .quote-form .form-select {
+            color: #000 !important;
+            background-color: #fff !important;
+            border: 1px solid #ddd;
+        }
+
+        .quote-form .form-control:focus,
+        .quote-form .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(255, 128, 15, 0.25);
+        }
+
+        .quote-form label {
+            color: #000 !important;
+        }
+
+        /* Testimonial Ratings */
+        .rating {
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+        .testimonial-rating {
+            font-size: 14px;
+        }
+
+        /* Newsletter Form */
+        .newsletter-form .form-control {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #ddd;
+        }
+
+        .newsletter-form .btn-primary {
+            white-space: nowrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+            
+            .carousel-item {
+                height: 60vh;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 80px;
+            }
+        }
+        
+        /* Success/Error message styles */
+        .alert {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            min-width: 300px;
+        }
+
+        /* Loading indicator for form submission */
+        .form-loading {
+            display: none;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Alert Messages -->
+    <div id="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your message has been sent successfully.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <div id="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> There was a problem sending your message. Please try again.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float pulse" id="whatsappIcon">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us</div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-phone-alt me-2"></i>
+                    <small>+923004550539</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open me-2"></i>
+                    <small>easycleaning1122@gmail.com</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    <small>+923004550539</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <ol class="breadcrumb justify-content-end mb-0">
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="Index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="#footer">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="#footer">Privacy</a></li>
+                    <li class="breadcrumb-item"><a class="text-white-50 small" href="#footer">Support</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="me-3" style="width: 50px; height: 50px; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-broom text-white"></i>
+                </div>
+                <h3 class="m-0 fw-bolder">Easy Cleaning Services</h3>
+            </a>
+     
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">About Us</a>
+                    <a href="Service.html" class="nav-item nav-link">Our Services</a>
+                    <a href="Contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/share/1Sm8iaW2SK/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://x.com/EasyS4092?t=7AoRpZ847w6d-RkHAswxOw&s=08"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.linkedin.com/in/easy-cleaning-services-88976138a/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://www.instagram.com/easycleaning1122/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <!-- In first carousel item -->
+<img class="w-100" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Professional Cleaning">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-4 animated slideInDown">Professional Cleaning Services You Can Trust</h1>
+                                    <p class="fs-5 text-light mb-4 pb-2 mx-sm-5 animated slideInDown">We provide top-quality residential, commercial, and industrial cleaning services with trained professionals and eco-friendly products.</p>
+                                    <a href="#service" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- In second carousel item -->
+<img class="w-100" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Complete Cleaning Solutions">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-4 animated slideInDown">Complete Cleaning Solutions for Every Space</h1>
+                                    <p class="fs-5 text-light mb-4 pb-2 mx-sm-5 animated slideInDown">From residential homes to commercial complexes and hospitals - we deliver exceptional cleaning services tailored to your needs.</p>
+                                    <a href="#contact" class="btn btn-primary py-3 px-5 animated slideInDown">Get Free Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="h-100">
+                        <h1  id="about"  class="display-6 mb-5">Welcome To Easy Cleaning Services - Your Trusted Cleaning Partner</h1>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                    <h5 class="mb-0">Expert Cleaning Staff</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <h5 class="mb-0">Best Quality Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">With years of experience in the cleaning industry, Easy Cleaning Services has built a reputation for excellence. We use advanced cleaning techniques, eco-friendly products, and trained professionals to ensure your space shines. Our commitment to quality and customer satisfaction sets us apart.</p>
+                        <div class="border-top mt-4 pt-4">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="btn-lg-square bg-primary rounded-circle me-3">
+                                            <i class="fa fa-phone-alt text-white"></i>
+                                        </div>
+                                        <h5 class="mb-0">+923004550539</h5>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="btn-lg-square bg-primary rounded-circle me-3">
+                                            <i class="fa fa-envelope text-white"></i>
+                                        </div>
+                                        <h5 class="mb-0">easycleaning1122@gmail.com</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid w-75 rounded about-img" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Image 1">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid w-100 rounded about-img" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Image 2">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid w-50 rounded about-img" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Image 3">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid w-75 rounded about-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Image 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facts Section -->
+    <div class="container-fluid facts my-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">50</h1>
+                    <span class="text-primary">Happy Clients</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">500</h1>
+                    <span class="text-primary">Projects Completed</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">Owner</h1>
+                    <span class="text-primary">Expert Staff</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">2</h1>
+                    <span class="text-primary">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h1 class="display-6 mb-5">Why Choose Easy Cleaning Services?</h1>
+                    <p class="mb-5">We understand that every space has unique cleaning needs. That's why we offer customized solutions with attention to detail, ensuring complete satisfaction for all our clients.</p>
+                    <div class="d-flex mb-5">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">Trusted Service Provider</h5>
+                            <span>With years of experience and hundreds of satisfied clients, we've built a reputation for reliability and excellence in the cleaning industry.</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-5">
+                        <div class="feature-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">Competitive Pricing</h5>
+                            <span>We offer high-quality cleaning services at reasonable prices, providing excellent value for your investment without compromising on quality.</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-0">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">24/7 Customer Support</h5>
+                            <span>Our dedicated support team is available around the clock to address your queries and schedule services at your convenience.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
+                        <img class="position-absolute w-100 h-100 rounded" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1  id="service" class="display-6 mb-5">Our Professional Cleaning Services</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Residential Cleaning">
+                        <div class="service-content">
+                            <div class="d-flex align-items-center">
+                                <div class="service-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h4 class="mb-0">Residential Cleaning</h4>
+                            </div>
+                            <p class="mt-3">Complete home cleaning services including bedrooms, living areas, kitchens, and bathrooms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Commercial Cleaning">
+                        <div class="service-content">
+                            <div class="d-flex align-items-center">
+                                <div class="service-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h4 class="mb-0">Commercial Cleaning</h4>
+                            </div>
+                            <p class="mt-3">Professional cleaning for offices, retail spaces, and commercial buildings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <img class="img-fluid" src="https://up.yimg.com/ib/th/id/OIP.Gnnz3P10Doo3aEFdFBKkwQHaE8?pid=Api&rs=1&c=1&qlt=95&w=176&h=117" alt="Office Cleaning">
+                        <div class="service-content">
+                            <div class="d-flex align-items-center">
+                                <div class="service-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4 class="mb-0">Office Cleaning</h4>
+                            </div>
+                            <p class="mt-3">Thorough cleaning of workspaces, common areas, and restrooms for a productive environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <img class="img-fluid" src="https://up.yimg.com/ib/th/id/OIP.kjyjbhGGgi-iVOZdA-OTywHaE8?pid=Api&rs=1&c=1&qlt=95&w=169&h=113" alt="Floor Services">
+                        <div class="service-content">
+                            <div class="d-flex align-items-center">
+                                <div class="service-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <h4 class="mb-0">Floor Services</h4>
+                            </div>
+                            <p class="mt-3">Specialized floor cleaning including waxing, polishing, and deep cleaning for all floor types.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add these after the existing 6 services -->
+<div class="col-lg-4 col-md-6">
+    <div class="service-item">
+        <img class="img-fluid" src="https://up.yimg.com/ib/th/id/OIP.tMWyag0QEnQWKq29ffCbJAHaE8?pid=Api&rs=1&c=1&qlt=95&w=145&h=96" alt="Carpet Cleaning">
+        <div class="service-content">
+            <div class="d-flex align-items-center">
+                <div class="service-icon">
+                    <i class="fas fa-rug"></i>
+                </div>
+                <h4 class="mb-0">Carpet Cleaning</h4>
+            </div>
+            <p class="mt-3">Deep cleaning and stain removal for all types of carpets and rugs.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-6">
+    <div class="service-item">
+        <img class="img-fluid" src="https://up.yimg.com/ib/th/id/OIP.8BRdnX7HvRkY8mj84AVh-AHaE7?pid=Api&rs=1&c=1&qlt=95&w=181&h=120" alt="Window Cleaning">
+        <div class="service-content">
+            <div class="d-flex align-items-center">
+                <div class="service-icon">
+                    <i class="fas fa-window-restore"></i>
+                </div>
+                <h4 class="mb-0">Window Cleaning</h4>
+            </div>
+            <p class="mt-3">Crystal clear window cleaning for residential and commercial buildings.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-6">
+    <div class="service-item">
+        <img class="img-fluid" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="House Keeping">
+        <div class="service-content">
+            <div class="d-flex align-items-center">
+                <div class="service-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <h4 class="mb-0">House Keeping</h4>
+            </div>
+            <p class="mt-3">Regular maintenance and housekeeping services for daily cleanliness.</p>
+        </div>
+    </div>
+</div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hospital Cleaning">
+                        <div class="service-content">
+                            <div class="d-flex align-items-center">
+                                <div class="service-icon">
+                                    <i class="fas fa-hospital"></i>
+                                </div>
+                                <h4 class="mb-0">Hospital Cleaning</h4>
+                            </div>
+                            <p class="mt-3">Sterile cleaning services for medical facilities with strict sanitation protocols.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Solar Panel Cleaning">
+                        <div class="service-content">
+                            <div class="d-flex align-items-center">
+                                <div class="service-icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <h4 class="mb-0">Solar Panel Cleaning</h4>
+                            </div>
+                            <p class="mt-3">Professional cleaning of solar panels to maintain efficiency and maximize energy production.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="Service.html" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section (Replacing Team Section) -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1 class="display-6 mb-5">Why Choose Our Services?</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h5>Owner-Operated</h5>
+                        <p>As the owner-operator, I personally oversee every project to ensure the highest quality standards are met.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h5>Flexible Scheduling</h5>
+                        <p>I work around your schedule to provide cleaning services when it's most convenient for you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5>Eco-Friendly Products</h5>
+                        <p>I use environmentally friendly cleaning products that are safe for your family, pets, and the planet.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h5>Guaranteed Satisfaction</h5>
+                        <p>Your satisfaction is my priority. If you're not happy with the results, I'll make it right.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="container-fluid quote-section my-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h1 id="contact" class="text-white mb-4">Professional Cleaning Solutions for Homes and Businesses</h1>
+                    <p class="text-light mb-5">Whether you need regular maintenance cleaning or a one-time deep clean, our team of professionals is equipped to handle all your cleaning needs. We use eco-friendly products and advanced techniques to ensure your space is spotless and hygienic.</p>
+                    <a href="" class="btn btn-primary py-3 px-5">More Details</a>
+                </div>
+                <div class="col-lg-6">
+                   <center><h1>Contact Us</h1></center> 
+                    <form id="contactForm" class="quote-form">
+                        <div class="form-loading" id="formLoading">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Sending...</span>
+                            </div>
+                            <p class="mt-2">Sending your message...</p>
+                        </div>
+                        <h3 class="mb-4 text-center">Get a Free Quote</h3>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gname" name="name" placeholder="Your Name" required>
+                                    <label for="gname">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="gmail" name="email" placeholder="Your Email" required>
+                                    <label for="gmail">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cname" name="mobile" placeholder="Your Mobile" required>
+                                    <label for="cname">Your Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <select class="form-control" id="cage" name="service" required>
+                                        <option value="">Select Service</option>
+                                        <option value="residential">Residential Cleaning</option>
+                                        <option value="commercial">Commercial Cleaning</option>
+                                        <option value="office">Office Cleaning</option>
+                                        <option value="floor">Floor Services</option>
+                                        <option value="hospital">Hospital Cleaning</option>
+                                        <option value="solar">Solar Panel Cleaning</option>
+                                        <option value="housekeeping">House Keeping</option>
+                                    </select>
+                                    <label for="cage"></label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Get A Free Quote</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1 class="display-6 mb-5">What Our Clients Say About Our Services</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="testimonial-item">
+                        <img class="img-fluid mx-auto mb-4" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Client 1">
+                        <p class="fs-5">"Easy Cleaning Services transformed our office space! Their team is professional, thorough, and always on time. Highly recommended for commercial cleaning."</p>
+                        <h5>Office Manager</h5>
+                        <span>ABC Corporation</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item">
+                        <img class="img-fluid mx-auto mb-4" src="https://up.yimg.com/ib/th/id/OIP.iVuqyTTROrPMw_spxpCKFwHaHa?pid=Api&rs=1&c=1&qlt=95&w=116&h=116" alt="Client 2">
+                        <p class="fs-5">"The residential cleaning service is exceptional. My house has never been cleaner! They pay attention to every detail and use eco-friendly products."</p>
+                        <h5>Home Owner</h5>
+                        <span>Residential Client</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item">
+                        <img class="img-fluid mx-auto mb-4" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Client 3">
+                        <p class="fs-5">"We hired them for hospital cleaning and were impressed with their sanitation standards and professional approach. Truly reliable service!"</p>
+                        <h5>Hospital Administrator</h5>
+                        <span>City Medical Center</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h1 class="mb-4"><i class="fas fa-broom text-primary me-3"></i>Easy Cleaning Services</h1>
+                    <p>Professional cleaning services for residential, commercial, and industrial spaces. We use eco-friendly products and advanced cleaning techniques to ensure your space is spotless and hygienic. Trust us for all your cleaning needs.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for cleaning tips and special offers.</p>
+                    <form id="newsletterForm" class="newsletter-form d-flex">
+                        <input class="form-control me-2" type="email" name="email" placeholder="Your email" required>
+                        <button class="btn btn-primary">SignUp</button>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Karachi, Pakistan</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+923004550539</p>
+                    <p><i class="fab fa-whatsapp me-3"></i>+923004550539</p>
+                    <p><i class="fa fa-envelope me-3"></i>easycleaning1122@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Our Services</h5>
+                    <a class="btn btn-link" href="">Residential Cleaning</a>
+                    <a class="btn btn-link" href="">Commercial Cleaning</a>
+                    <a class="btn btn-link" href="">Office Cleaning</a>
+                    <a class="btn btn-link" href="">Hospital Cleaning</a>
+                    <a class="btn btn-link" href="">Floor Services</a>
+                    <a class="btn btn-link" href="">Solar Panel Cleaning</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="#about">About Us</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <a class="btn btn-link" href="#service">Our Services</a>
+                   
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Follow Us</h5>
+                    <div class="d-flex">
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/share/1Sm8iaW2SK/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://x.com/EasyS4092?t=7AoRpZ847w6d-RkHAswxOw&s=08"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.instagram.com/easycleaning1122/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.linkedin.com/in/easy-cleaning-services-88976138a/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Easy Cleaning Services</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By Easy Cleaning Services Team
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+        })();
+
+        // Spinner
+        var spinner = function () {
+            setTimeout(function () {
+                if ($('#spinner').length > 0) {
+                    $('#spinner').removeClass('show');
+                }
+            }, 1);
+        };
+        spinner();
+
+        // Back to top button
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').fadeIn('slow');
+            } else {
+                $('.back-to-top').fadeOut('slow');
+            }
+        });
+        $('.back-to-top').click(function () {
+            $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+            return false;
+        });
+
+        // Counter
+        $('[data-toggle="counter-up"]').each(function() {
+            var $this = $(this);
+            var countTo = $this.attr('data-count');
+            $({ countNum: $this.text()}).animate({
+                countNum: countTo
+            },
+            {
+                duration: 2000,
+                easing:'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                    $this.text(this.countNum);
+                }
+            });
+        });
+
+        // WhatsApp Button Functionality
+        $('#whatsappIcon').click(function() {
+            const phoneNumber = '923004550539';
+            const message = 'Hello! I would like to get more information about your cleaning services.';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        });
+
+        // Contact Form Submission with EmailJS
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: $('#gname').val(),
+                email: $('#gmail').val(),
+                mobile: $('#cname').val(),
+                service: $('#cage').val(),
+                message: $('#message').val()
+            };
+            
+            // Basic validation
+            if (!formData.name || !formData.mobile || !formData.service) {
+                alert('Please fill in all required fields: Name, Mobile, and Service Type.');
+                return;
+            }
+            
+            // Show loading indicator
+            $('#formLoading').show();
+            $('#submitBtn').prop('disabled', true);
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                from_name: formData.name,
+                from_email: formData.email,
+                mobile: formData.mobile,
+                service: formData.service,
+                message: formData.message,
+                to_email: 'easycleaning1122@gmail.com'
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                // Show success message
+                $('#successAlert').fadeIn();
+                setTimeout(function() {
+                    $('#successAlert').fadeOut();
+                }, 5000);
+                
+                // Reset form
+                $('#contactForm')[0].reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                // Show error message
+                $('#errorAlert').text('There was an error sending your message. Please try again.').fadeIn();
+                setTimeout(function() {
+                    $('#errorAlert').fadeOut();
+                }, 5000);
+            })
+            .finally(function() {
+                // Hide loading indicator
+                $('#formLoading').hide();
+                $('#submitBtn').prop('disabled', false);
+            });
+        });
+
+        // Newsletter Form Submission
+        $('#newsletterForm').on('submit', function(e) {
+            e.preventDefault();
+            const email = $(this).find('input[name="email"]').val();
+            
+            if (email && validateEmail(email)) {
+                // Show success message
+                $('#successAlert').text('Thank you for subscribing to our newsletter!').fadeIn();
+                setTimeout(function() {
+                    $('#successAlert').fadeOut();
+                }, 5000);
+                
+                $(this).find('input[name="email"]').val('');
+            } else {
+                $('#errorAlert').text('Please enter a valid email address.').fadeIn();
+                setTimeout(function() {
+                    $('#errorAlert').fadeOut();
+                }, 5000);
+            }
+        });
+
+        // Email validation function
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Smooth scrolling for anchor links
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top - 70,
+                },
+                500,
+                'linear'
+            );
+        });
+    </script>
+</body>
+
+</html>
